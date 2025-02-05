@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 const DownloadChart = ({ data }) => {
@@ -7,17 +6,10 @@ const DownloadChart = ({ data }) => {
       {
         name: 'Bandwidth Speed',
         data: data.map((item) => ({
-          x: new Date(item.datetime).getTime(),
-          y: item.data.download.bandwidth,
+          x: new Date(new Date(item.datetime).getTime() + 7 * 60 * 60 * 1000).getTime(),
+          y: parseFloat((item.data.download.bandwidth/1000000).toFixed(2)),
         })),
       },
-    //   {
-    //     name: 'Bytes Speed',
-    //     data: data.map((item) => ({
-    //       x: new Date(item.datetime).getTime(),
-    //       y: item.data.download.bytes,
-    //     })),
-    //   },
     ],
     options: {
       chart: {
@@ -33,6 +25,7 @@ const DownloadChart = ({ data }) => {
       xaxis: { type: 'datetime' },
       tooltip: {
         x: { format: 'dd/MM/yy HH:mm' },
+        y: {formatter: (val) => `${val} Mbps`}
       },
       colors: ['#007bff', '#28a745'],
     },

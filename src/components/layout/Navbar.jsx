@@ -1,10 +1,10 @@
-import { Navbar, Container, Button } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 
-const AppNavbar = ({ sidebarOpen, toggleSidebar }) => {
+const AppNavbar = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg" className={`navbar-custom ${sidebarOpen ? 'expanded' : 'collapsed'}`}>
+    <Navbar bg="primary" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#" className="ms-3">Nav</Navbar.Brand>
+        <Navbar.Brand href="#" className="ms-3">📊 Data Speedtest</Navbar.Brand>
       </Container>
     </Navbar>
   );

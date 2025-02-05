@@ -9,8 +9,13 @@ export const fetchSpeedTestData = async () => {
         'Author': 'vedeom',
       },
     });
+
+    console.log('API Response:', response.data); // Log seluruh response
+    console.log('Parsed Data:', response.data.data || []); // Log data yang diproses
+
     return response.data.data || [];
   } catch (error) {
+    console.error('API Fetch Error:', error.message); // Log error jika terjadi kesalahan
     throw new Error(error.message);
   }
 };
