@@ -7,7 +7,7 @@ const DownloadChart = ({ data }) => {
         name: 'Bandwidth Speed',
         data: data.map((item) => ({
           x: new Date(new Date(item.datetime).getTime() + 7 * 60 * 60 * 1000).getTime(),
-          y: parseFloat((item.data.download.bandwidth/1000000).toFixed(2)),
+          y: parseFloat((item.data.download.bandwidth / 1000000).toFixed(2)),
         })),
       },
     ],
@@ -15,19 +15,42 @@ const DownloadChart = ({ data }) => {
       chart: {
         height: 250,
         type: 'area',
-        background: '#f8f9fa',
+        background: '#121212',
+        toolbar: { show: false },
       },
       dataLabels: { enabled: false },
       stroke: {
         curve: 'smooth',
-        colors: ['#007bff', '#28a745'],
+        colors: ['#00bcd4'],
       },
-      xaxis: { type: 'datetime' },
+      xaxis: {
+        type: 'datetime',
+        labels: { style: { colors: '#ffffff', fontFamily: 'Poppins, sans-serif' } },
+        axisBorder: { color: '#555555' },
+        axisTicks: { color: '#555555' },
+      },
+      yaxis: {
+        labels: { style: { colors: '#ffffff', fontFamily: 'Poppins, sans-serif' } },
+      },
+      grid: {
+        borderColor: '#555555',
+        strokeDashArray: 4,
+      },
       tooltip: {
+        theme: 'dark',
         x: { format: 'dd/MM/yy HH:mm' },
-        y: {formatter: (val) => `${val} Mbps`}
+        y: { formatter: (val) => `${val} Mbps` },
       },
-      colors: ['#007bff', '#28a745'],
+      colors: ['#00bcd4'],
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'dark',
+          type: 'vertical',
+          gradientToColors: ['#007bff'],
+          stops: [0, 100],
+        },
+      },
     },
   };
 

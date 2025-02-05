@@ -26,8 +26,8 @@ const SpeedTestData = () => {
 
   if (loading) {
     return (
-      <Container className="text-center mt-5">
-        <Spinner animation="border" variant="primary" />
+      <Container className="text-center mt-5 text-light">
+        <Spinner animation="border" variant="light" />
         <p>Loading...</p>
       </Container>
     );
@@ -42,30 +42,29 @@ const SpeedTestData = () => {
   }
 
   return (
-    <Container className="mt-4">
-      <h2 className="mb-4 text-primary">Speedtest Dashboard</h2>
+    <Container className="text-light" style={{ backgroundColor: '#1a1a1a', minHeight: '100vh', padding: '20px' }}>
       <Row>
         <Col md={6}>
-          <Card className="mb-4 shadow-sm border-primary">
+          <Card className="mb-4 shadow-sm border-light bg-dark text-light">
             <Card.Body>
-              <Card.Title className="text-center text-primary">Download Speed</Card.Title>
-              <DownloadChart data={data} />
+              <Card.Title className="text-center">Download Speed</Card.Title>
+              <DownloadChart data={data} title="Download Speed" type="download" />
             </Card.Body>
           </Card>
         </Col>
         <Col md={6}>
-          <Card className="mb-4 shadow-sm border-primary">
+          <Card className="mb-4 shadow-sm border-light bg-dark text-light">
             <Card.Body>
-              <Card.Title className="text-center text-primary">Upload Speed</Card.Title>
-              <UploadChart data={data} />
+              <Card.Title className="text-center">Upload Speed</Card.Title>
+              <UploadChart data={data} title="Upload Speed" type="upload" />
             </Card.Body>
           </Card>
         </Col>
       </Row>
       <Row>
         <Col>
-          <Table striped bordered hover responsive className="mt-4">
-            <thead className="table-primary text-center">
+          <Table striped bordered hover responsive className="mt-4" variant="dark" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <thead className="bg-secondary text-light text-center">
               <tr>
                 <th className="px-4">Download Bytes</th>
                 <th className="px-4">Download Elapsed</th>
@@ -77,10 +76,10 @@ const SpeedTestData = () => {
             <tbody>
               {data.map((item) => (
                 <tr key={item._id}>
-                  <td className="px-4 text-center">{Math.floor(item.data.download.bytes / 1000000).toString().slice(0, 3)} Mbps</td>
-                  <td className="px-4 text-center">{(item.data.download.elapsed/1000).toFixed(2)}s</td>
-                  <td className="px-4 text-center">{Math.floor(item.data.upload.bytes/1000000).toString().slice(0, 3)} Mbps</td>
-                  <td className="px-4 text-center">{(item.data.upload.elapsed/1000).toFixed(2)}s</td>
+                  <td className="px-4 text-center">{(item.data.download.bytes / 1000000).toFixed(2)} Mbps</td>
+                  <td className="px-4 text-center">{(item.data.download.elapsed / 1000).toFixed(2)}s</td>
+                  <td className="px-4 text-center">{(item.data.upload.bytes / 1000000).toFixed(2)} Mbps</td>
+                  <td className="px-4 text-center">{(item.data.upload.elapsed / 1000).toFixed(2)}s</td>
                   <td className="px-4 text-center">
                     {item.data.server.country} ({item.data.server.location}, {item.data.server.name})
                   </td>
