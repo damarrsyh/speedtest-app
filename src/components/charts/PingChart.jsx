@@ -1,13 +1,13 @@
 import ReactApexChart from 'react-apexcharts';
 
-const DownloadChart = ({ data }) => {
+const PingChart = ({ data }) => {
   const chartData = {
     series: [
       {
-        name: 'Bandwidth Speed',
+        name: 'Ping',
         data: data.map((item) => ({
           x: new Date(new Date(item.datetime).getTime() + 7 * 60 * 60 * 1000).getTime(),
-          y: parseFloat((item.data.download.bandwidth / 1000000).toFixed(2)),
+          y: (item.data.ping.latency).toFixed(2),
         })),
       },
     ],
@@ -21,7 +21,7 @@ const DownloadChart = ({ data }) => {
       dataLabels: { enabled: false },
       stroke: {
         curve: 'smooth',
-        colors: ['#28a745'],
+        colors: ['#ffc107'],
       },
       xaxis: {
         type: 'datetime',
@@ -41,13 +41,13 @@ const DownloadChart = ({ data }) => {
         x: { format: 'dd/MM/yy HH:mm' },
         y: { formatter: (val) => `${val} Mbps` },
       },
-      colors: ['#28a745'],
+      colors: ['#ffc107'],
       fill: {
         type: 'gradient',
         gradient: {
           shade: 'dark',
           type: 'vertical',
-          gradientToColors: ['#28a745'],
+          gradientToColors: ['#ffc107'],
           stops: [0, 100],
         },
       },
@@ -57,4 +57,4 @@ const DownloadChart = ({ data }) => {
   return <ReactApexChart options={chartData.options} series={chartData.series} type="area" height={250} />;
 };
 
-export default DownloadChart;
+export default PingChart;
