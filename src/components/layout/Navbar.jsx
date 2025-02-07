@@ -6,7 +6,7 @@ const AppNavbar = () => {
     <Navbar bg="primary" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="#">
-        <FaChartLine style={{marginRight: '10px', color: '#b31e1e'}}/>
+          <FaChartLine style={{marginRight: '10px', color: '#b31e1e'}}/>
           Speedtest Tracker
           </Navbar.Brand>
       </Container>

@@ -1,12 +1,100 @@
-import { Container } from 'react-bootstrap';
-import SpeedTestData from '../SpeedTestData';
+import { useEffect, useState } from 'react';
+import { Container, Spinner, Alert, Pagination, Row, Col } from 'react-bootstrap';
+import { fetchSpeedTestData } from '../services/api';
+import AverageData from '../components/dashboard/AverageData';
+import Chart from '../components/dashboard/ChartData';
+import LatestData from '../components/dashboard/LatestData';
+import DataTable from '../components/dashboard/TableData';
 
 const Dashboard = () => {
-  return (
-    <Container fluid className="p-4">
-      <SpeedTestData/>
-    </Container>
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const fetchedData = await fetchSpeedTestData();
+        setData(fetchedData);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const currentData = data.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  if (loading) {
+    return (
+      <Container fluid className="text-center mt-5 text-light">
+        <Spinner animation="border" variant="light" />
+        <p>Loading...</p>
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container className="mt-5">
+        <Alert variant="danger">Error: {error}</Alert>
+      </Container>
+    );
+  }
+
+  return (
+    <Container fluid className="text-light" style={{ fontFamily: 'Poppins, sans-serif', backgroundColor: '#1a1a1a', minHeight: '', padding: '20px' }}>
+
+      <Row>
+        <Col md="4">
+          
+        </Col>
+        <Col md="8">
+      {/* Average Data */}
+      <AverageData data={data} />
+
+      {/* Charts */}
+      <Chart data={data} />
+
+      {/* Latest Data */}
+      <LatestData data={data} />
+        </Col>
+      </Row>
+
+      {/* Data Table */}
+      <DataTable data={currentData} />
+
+      {/* Pagination Controls */}
+      <Pagination className="justify-content-center">
+        <Pagination.Prev
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        />
+        {[...Array(totalPages)].map((_, index) => (
+          <Pagination.Item
+            key={index + 1}
+            active={index + 1 === currentPage}
+            onClick={() => handlePageChange(index + 1)}
+          >
+            {index + 1}
+          </Pagination.Item>
+        ))}
+        <Pagination.Next
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        />
+      </Pagination>
+    </Container>
   );
 };
 

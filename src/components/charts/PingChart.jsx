@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ReactApexChart from 'react-apexcharts';
 
 const PingChart = ({ data }) => {
@@ -7,7 +8,7 @@ const PingChart = ({ data }) => {
         name: 'Ping',
         data: data.map((item) => ({
           x: new Date(new Date(item.datetime).getTime() + 7 * 60 * 60 * 1000).getTime(),
-          y: (item.data.ping.latency).toFixed(2),
+          y: (item.data.ping.latency).toFixed(1),
         })),
       },
     ],

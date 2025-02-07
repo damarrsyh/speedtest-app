@@ -38,3 +38,46 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
+.pagination {
+  border-radius: 5px;         /* Membuat sudut yang lebih membulat */
+  border: none;               /* Menghilangkan border default */
+}
+
+/* Item pagination */
+.pagination .page-item {
+  background-color: #333;  /* Warna latar belakang item pagination */
+  color: #ffffff;          /* Warna teks item pagination */
+  border-radius: 5px;      /* Sudut yang membulat pada item */
+}
+
+.pagination .page-item.active {
+  background-color: #007bff;  /* Warna latar belakang item aktif (biru) */
+  color: #fff;                /* Teks putih untuk item aktif */
+}
+
+.pagination .page-item:hover:not(.active) {
+  background-color: #555;   /* Warna latar belakang saat hover, tapi tidak aktif */
+  color: #ffffff;           /* Warna teks tetap putih */
+}
+
+.pagination .page-item.disabled {
+  background-color: #2a2a2a; /* Warna latar belakang untuk item yang dinonaktifkan */
+  color: #777;               /* Warna teks untuk item yang dinonaktifkan */
+}
+
+.pagination .page-link {
+  color: #fff;                /* Warna teks untuk link halaman */
+  background-color: #333;     /* Warna latar belakang untuk link halaman */
+  border: none;               /* Menghilangkan border default pada link */
+}
+
+.pagination .page-link:hover {
+  color: #fff;                /* Teks tetap putih saat hover */
+  background-color: #555;     /* Warna latar belakang saat hover */
+}
+
+.pagination .page-link:focus {
+  outline: none;              /* Menghilangkan outline default saat fokus */
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Tambahkan efek fokus */
+}
+
