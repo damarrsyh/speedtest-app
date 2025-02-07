@@ -1,0 +1,22 @@
+{
+  "devices": [
+    {
+      "id": 1,
+      "name": "Office PC",
+      "ip": "192.168.1.10",
+      "status": "Online"
+    },
+    {
+      "id": 2,
+      "name": "Router",
+      "ip": "192.168.1.1",
+      "status": "Online"
+    },
+    {
+      "id": 3,
+      "name": "Decoder",
+      "ip": "192.168.1.20",
+      "status": "Offline"
+    }
+  ]
+}

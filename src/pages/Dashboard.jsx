@@ -1,17 +1,28 @@
 import { useEffect, useState } from 'react';
 import { Container, Spinner, Alert, Pagination, Row, Col } from 'react-bootstrap';
 import { fetchSpeedTestData } from '../services/api';
+import { fetchActiveDevices } from "../services/api"; // Impor fungsi API
 import AverageData from '../components/dashboard/AverageData';
 import Chart from '../components/dashboard/ChartData';
 import LatestData from '../components/dashboard/LatestData';
 import DataTable from '../components/dashboard/TableData';
+import AppDevice from '../components/dashboard/AppDevice';
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
+  const [devices, setDevices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
+
+  useEffect(() => {
+    const loadDevices = async () => {
+      const data = await fetchActiveDevices();
+      setDevices(data);
+    };
+    loadDevices();
+  }, []);
 
   useEffect(() => {
     const loadData = async () => {
@@ -57,7 +68,7 @@ const Dashboard = () => {
 
       <Row>
         <Col md="4">
-          
+      <AppDevice devices={devices}/>
         </Col>
         <Col md="8">
       {/* Average Data */}
