@@ -1,13 +1,15 @@
 {
     "app_device": {
         "status": 200,
-        "data": [
+        "devices": [
             {
+                "id": "1",
                 "ip": "192.168.0.1",
                 "name": "router",
                 "is_online": 1
             },
             {
+                "id": "2",
                 "ip": "192.168.0.2",
                 "name": "decoder",
                 "is_online": 0

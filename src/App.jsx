@@ -11,7 +11,7 @@ function App() {
       <div className='content-container'>
         <AppNavbar/>
         <Container fluid>
-          <Dashboard />
+          <Dashboard/>
         </Container>
       </div>
     </div>

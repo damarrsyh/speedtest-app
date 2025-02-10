@@ -51,8 +51,10 @@
 }
 
 .pagination .page-item.active {
-  background-color: #007bff;  /* Warna latar belakang item aktif (biru) */
-  color: #fff;                /* Teks putih untuk item aktif */
+  background-color: #333;  /* Warna latar belakang item aktif (biru) */
+  color: #ffffff;             /* Teks putih untuk item aktif */
+  font-weight: bold;          /* Menebalkan teks untuk item aktif */
+  box-shadow: 0 0 0 0.2rem rgba(175, 175, 175, 0.25); /* Menambahkan efek bayangan untuk membedakan item aktif */
 }
 
 .pagination .page-item:hover:not(.active) {
@@ -78,6 +80,6 @@
 
 .pagination .page-link:focus {
   outline: none;              /* Menghilangkan outline default saat fokus */
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Tambahkan efek fokus */
+  box-shadow: 0 0 0 0.2rem rgba(175, 175, 175, 0.25); /* Tambahkan efek fokus */
 }
 

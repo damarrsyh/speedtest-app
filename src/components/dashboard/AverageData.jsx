@@ -23,39 +23,48 @@ const AverageData = ({ data }) => {
 
   return (
     <Row>
-      <Col md={4}>
-        <Card className="mb-4 shadow-sm border-light bg-dark text-light">
-          <Card.Header as="h6">
-            <FaDownload style={{ marginRight: '10px', width: '15px', color: '#28a745' }} />
-            Average Download
-          </Card.Header>
-          <Card.Body>
-            <Card.Title as="h4">{(average.download / 1000000).toFixed(2)} Mbps</Card.Title>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col md={4}>
-        <Card className="mb-4 shadow-sm border-light bg-dark text-light">
-          <Card.Header as="h6">
-            <FaUpload style={{ marginRight: '10px', width: '15px', color: '#00bcd4' }} />
-            Average Upload
-          </Card.Header>
-          <Card.Body>
-            <Card.Title as="h4">{(average.upload / 1000000).toFixed(2)} Mbps</Card.Title>
-          </Card.Body>
-        </Card>
-      </Col>
-      <Col md={4}>
-        <Card className="mb-4 shadow-sm border-light bg-dark text-light">
-          <Card.Header as="h6">
-            <FaTachometerAlt style={{ marginRight: '10px', width: '15px', color: '#ffc107' }} />
-            Average Ping
-          </Card.Header>
-          <Card.Body>
-            <Card.Title as="h4">{average.ping.toFixed(1)} ms</Card.Title>
-          </Card.Body>
-        </Card>
-      </Col>
+      <Card  className="mb-4 shadow-sm border-light bg-dark text-light">
+        <Card.Header>
+          <h2 style={{marginTop: '20px', marginBottom: '20px'}}>Average Data</h2>
+        </Card.Header>
+        <Card.Body>
+          <Row>
+            <Col md={4}>
+              <Card className="mb-4 shadow-sm bg-dark text-light">
+                <Card.Header as="h6">
+                  <FaDownload style={{ marginRight: '10px', width: '15px', color: '#28a745' }} />
+                  Average Download
+                </Card.Header>
+                <Card.Body>
+                  <Card.Title as="h4">{(average.download / 1000000).toFixed(2)} Mbps</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4 shadow-sm bg-dark text-light">
+                <Card.Header as="h6">
+                  <FaUpload style={{ marginRight: '10px', width: '15px', color: '#00bcd4' }} />
+                  Average Upload
+                </Card.Header>
+                <Card.Body>
+                  <Card.Title as="h4">{(average.upload / 1000000).toFixed(2)} Mbps</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="mb-4 shadow-sm bg-dark text-light">
+                <Card.Header as="h6">
+                  <FaTachometerAlt style={{ marginRight: '10px', width: '15px', color: '#ffc107' }} />
+                  Average Ping
+                </Card.Header>
+                <Card.Body>
+                  <Card.Title as="h4">{average.ping.toFixed(1)} ms</Card.Title>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Card.Body>
+      </Card>
     </Row>
   );
 };

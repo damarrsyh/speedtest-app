@@ -18,9 +18,16 @@ const Dashboard = () => {
 
   useEffect(() => {
     const loadDevices = async () => {
-      const data = await fetchActiveDevices();
-      setDevices(data);
+      try {
+        const data = await fetchActiveDevices();
+        setDevices(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
+    
     loadDevices();
   }, []);
 
@@ -67,44 +74,50 @@ const Dashboard = () => {
     <Container fluid className="text-light" style={{ fontFamily: 'Poppins, sans-serif', backgroundColor: '#1a1a1a', minHeight: '', padding: '20px' }}>
 
       <Row>
-        <Col md="4">
-      <AppDevice devices={devices}/>
-        </Col>
-        <Col md="8">
+        <Col>
       {/* Average Data */}
+
       <AverageData data={data} />
 
       {/* Charts */}
       <Chart data={data} />
 
       {/* Latest Data */}
-      <LatestData data={data} />
+      {/* <LatestData data={data} /> */}
         </Col>
       </Row>
 
       {/* Data Table */}
-      <DataTable data={currentData} />
+      <Row>
+        <Col md="4">
+          <AppDevice devices={devices}/>
+        </Col>
+        <Col md="8">
+          <DataTable data={currentData} />
+          <Pagination className="justify-content-center">
+            <Pagination.Prev
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            />
+            {[...Array(totalPages)].map((_, index) => (
+              <Pagination.Item
+                key={index + 1}
+                active={index + 1 === currentPage}
+                onClick={() => handlePageChange(index + 1)}
+              >
+                {index + 1}
+              </Pagination.Item>
+            ))}
+            <Pagination.Next
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            />
+          </Pagination>
+        </Col>
+      </Row>
 
-      {/* Pagination Controls */}
-      <Pagination className="justify-content-center">
-        <Pagination.Prev
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        />
-        {[...Array(totalPages)].map((_, index) => (
-          <Pagination.Item
-            key={index + 1}
-            active={index + 1 === currentPage}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </Pagination.Item>
-        ))}
-        <Pagination.Next
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        />
-      </Pagination>
+      {/* Pagination Controls Table Data*/}
+
     </Container>
   );
 };

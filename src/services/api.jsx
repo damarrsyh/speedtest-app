@@ -28,6 +28,8 @@ export const fetchActiveDevices = async () => {
     const response = await axios.get(API_JSON_URL);
 
     console.log('Devices API Response:', response.data);
+    console.log('Parsed Data Devices:', response.data.devices || []);
+
     return response.data.devices || [];
   } catch (error) {
     console.error('Devices API Fetch Error:', error.message);
