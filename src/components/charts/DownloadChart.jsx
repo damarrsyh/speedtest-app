@@ -15,7 +15,7 @@ const DownloadChart = ({ data }) => {
       chart: {
         height: 250,
         type: 'area',
-        background: '#121212',
+        background: '#ececec',
         toolbar: { show: false },
       },
       dataLabels: { enabled: false },
@@ -25,19 +25,19 @@ const DownloadChart = ({ data }) => {
       },
       xaxis: {
         type: 'datetime',
-        labels: { style: { colors: '#ffffff', fontFamily: 'Poppins, sans-serif' } },
+        labels: { style: { fontFamily: 'Poppins, sans-serif' } },
         axisBorder: { color: '#555555' },
         axisTicks: { color: '#555555' },
       },
       yaxis: {
-        labels: { style: { colors: '#ffffff', fontFamily: 'Poppins, sans-serif' } },
+        labels: { style: { fontFamily: 'Poppins, sans-serif' } },
       },
       grid: {
         borderColor: '#555555',
         strokeDashArray: 4,
       },
       tooltip: {
-        theme: 'dark',
+        theme: 'light',
         x: { format: 'dd/MM/yy HH:mm' },
         y: { formatter: (val) => `${val} Mbps` },
       },
@@ -45,7 +45,7 @@ const DownloadChart = ({ data }) => {
       fill: {
         type: 'gradient',
         gradient: {
-          shade: 'dark',
+          shade: 'light',
           type: 'vertical',
           gradientToColors: ['#28a745'],
           stops: [0, 100],

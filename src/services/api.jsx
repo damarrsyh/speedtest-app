@@ -28,9 +28,22 @@ export const fetchActiveDevices = async () => {
     const response = await axios.get(API_JSON_URL);
 
     console.log('Devices API Response:', response.data);
-    console.log('Parsed Data Devices:', response.data.devices || []);
 
-    return response.data.devices || [];
+    // Pastikan response.data adalah array
+    const dataArray = Array.isArray(response.data) ? response.data : [];
+
+    // Konversi data API ke format yang sesuai
+    const formattedDevices = dataArray.flatMap(item =>
+      item.result.map(device => ({
+        id: item.id,  // Menggunakan id dari API sebagai key
+        ip: device.target,  // IP Address
+        name: device.devices, // Nama perangkat
+        is_online: device.alive === 1 ? "Online" : "Offline" // Status perangkat
+      }))
+    );
+
+    console.log('Parsed Devices:', formattedDevices);
+    return formattedDevices;
   } catch (error) {
     console.error('Devices API Fetch Error:', error.message);
     return [];

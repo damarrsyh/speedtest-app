@@ -1,33 +1,18 @@
-/* App.css */
-.app-container {
-  background-color: #121212; /* Warna gelap utama */
-  min-height: 100vh;
-  display: flex;
-  color: #ffffff; /* Warna teks putih untuk kontras */
-}
-
-.content-container {
-  flex: 1;
-  transition: margin-left 0.3s ease-in-out;
-  background-color: #1e1e1e; /* Warna latar belakang konten */
-  padding: 20px;
-}
-
-.container-fluid {
-  background-color: #1a1a1a; /* Warna latar belakang untuk dashboard */
-  padding: 20px;
-  border-radius: 10px;
-}
-
 /* Navbar styling jika diperlukan */
+body {
+  padding-top: 56px; /* Sesuaikan dengan tinggi Navbar */
+  padding-left: 250px; /* Sesuaikan dengan tinggi Navbar */
+}
+
 .navbar {
-  background-color: #1e1e1e !important;
-  border-bottom: 1px solid #333;
+  background-color: #ffffff !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* Tambahan untuk Bootstrap override */
 .bg-light {
-  background-color: #333 !important;
+  background-color: #f1f1f1 !important;
 }
 
 .text-dark {
@@ -38,48 +23,15 @@
   font-family: 'Poppins', sans-serif !important;
 }
 
-.pagination {
-  border-radius: 5px;         /* Membuat sudut yang lebih membulat */
-  border: none;               /* Menghilangkan border default */
+.sidebar {
+  width: 250px; 
+  height: 100vh; 
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  padding-top: 56px; 
+  overflow-y: auto; 
+  border-right: 1px solid #ddd;
 }
 
-/* Item pagination */
-.pagination .page-item {
-  background-color: #333;  /* Warna latar belakang item pagination */
-  color: #ffffff;          /* Warna teks item pagination */
-  border-radius: 5px;      /* Sudut yang membulat pada item */
-}
-
-.pagination .page-item.active {
-  background-color: #333;  /* Warna latar belakang item aktif (biru) */
-  color: #ffffff;             /* Teks putih untuk item aktif */
-  font-weight: bold;          /* Menebalkan teks untuk item aktif */
-  box-shadow: 0 0 0 0.2rem rgba(175, 175, 175, 0.25); /* Menambahkan efek bayangan untuk membedakan item aktif */
-}
-
-.pagination .page-item:hover:not(.active) {
-  background-color: #555;   /* Warna latar belakang saat hover, tapi tidak aktif */
-  color: #ffffff;           /* Warna teks tetap putih */
-}
-
-.pagination .page-item.disabled {
-  background-color: #2a2a2a; /* Warna latar belakang untuk item yang dinonaktifkan */
-  color: #777;               /* Warna teks untuk item yang dinonaktifkan */
-}
-
-.pagination .page-link {
-  color: #fff;                /* Warna teks untuk link halaman */
-  background-color: #333;     /* Warna latar belakang untuk link halaman */
-  border: none;               /* Menghilangkan border default pada link */
-}
-
-.pagination .page-link:hover {
-  color: #fff;                /* Teks tetap putih saat hover */
-  background-color: #555;     /* Warna latar belakang saat hover */
-}
-
-.pagination .page-link:focus {
-  outline: none;              /* Menghilangkan outline default saat fokus */
-  box-shadow: 0 0 0 0.2rem rgba(175, 175, 175, 0.25); /* Tambahkan efek fokus */
-}
 

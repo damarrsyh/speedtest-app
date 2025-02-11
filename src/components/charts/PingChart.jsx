@@ -16,7 +16,7 @@ const PingChart = ({ data }) => {
       chart: {
         height: 250,
         type: 'area',
-        background: '#121212',
+        background: '#ececec',
         toolbar: { show: false },
       },
       dataLabels: { enabled: false },
@@ -26,12 +26,12 @@ const PingChart = ({ data }) => {
       },
       xaxis: {
         type: 'datetime',
-        labels: { style: { colors: '#ffffff', fontFamily: 'Poppins, sans-serif' } },
+        labels: { style: { fontFamily: 'Poppins, sans-serif' } },
         axisBorder: { color: '#555555' },
         axisTicks: { color: '#555555' },
       },
       yaxis: {
-        labels: { style: { colors: '#ffffff', fontFamily: 'Poppins, sans-serif' } },
+        labels: { style: { fontFamily: 'Poppins, sans-serif' } },
       },
       grid: {
         borderColor: '#555555',
