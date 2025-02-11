@@ -1,18 +1,34 @@
 import "bootstrap/dist/css/bootstrap.min.css"
-import AppNavbar from './components/layout/Navbar';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/layout/Sidebar';
+import Navbar from './components/layout/Navbar';
 import Dashboard from './pages/Dashboard';
+import DevicesPage from './pages/DevicesPage';
+import ReportPage from "./pages/ReportPage";
+import SettingsPage from "./pages/SettingsPage";
 import './App.css';
 
 function App() {
-
   return (
-    <>
-      <AppNavbar/>
-        <Sidebar/>
-        <Dashboard/>
-    </>
+    <Router>
+      <div className="flex">
+        <Sidebar />
+        <div className="w-full">
+          <Navbar />
+          <div className="content p-4">
+            <Routes>
+              <Route path="/" element={<Navigate to="/dashboard" />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/devices" element={<DevicesPage />} />
+              <Route path="/reports" element={<ReportPage />} />
+              <Route path="/settings" element={<SettingsPage />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
