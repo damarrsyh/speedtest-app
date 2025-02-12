@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
+import Navbar from './components/layout/Navbar';
 import Dashboard from './pages/Dashboard';
 import DevicePage from './pages/DevicesPage';
 import ReportPage from './pages/ReportPage';
@@ -9,7 +10,6 @@ import SettingsPage from './pages/SettingsPage';
 import './App.css';
 
 function App() {
-
   return (
     <Router>
     <div className="flex">
@@ -32,3 +32,4 @@ function App() {
 }
 
 export default App;
+

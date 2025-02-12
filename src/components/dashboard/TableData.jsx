@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 import { format } from 'date-fns';
 import { FaDownload, FaUpload, FaTachometerAlt } from "react-icons/fa";
 
-const DataTable = ({ data }) => {
+const DataTable = ({ data = [] }) => {
   return (
     <div style={{ overflowX: "auto", maxHeight: "400px", overflowY: "auto", position: "relative", borderTop: "1px solid #ddd" }}>
     <Table striped bordered hover responsive style={{ fontFamily: 'Poppins, sans-serif', minWidth: "900px"}}>

@@ -21,11 +21,11 @@ const Sidebar = () => {
         </Nav.Link>
         <Nav.Link as={Link} to="/settings" className={location.pathname === "/settings" ? "active" : ""}>
             <FaCog className="me-2" /> Settings
-        </Nav.Link>
-      </Nav>
-    </Navbar>
-  </div>
-  )
+          </Nav.Link>
+        </Nav>
+      </Navbar>
+    </div>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
