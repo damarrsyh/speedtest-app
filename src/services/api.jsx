@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL;
-const API_JSON_URL = import.meta.env.VITE_API_JSON_URL;
-
+const API_SPEED_URL = import.meta.env.VITE_API_SPEED_URL;
+const API_PING_URL = import.meta.env.VITE_API_PING_URL;
+const API_METRICS_URL = import.meta.env.VITE_API_METRICS_URL;
 // console.log(import.meta.env.VITE_API_URL)
 
 export const fetchSpeedTestData = async () => {
   try {
-    const response = await axios.get(API_URL, {
+    const response = await axios.get(API_SPEED_URL, {
       headers: {
         'Author': 'vedeom',
       },
@@ -25,7 +25,7 @@ export const fetchSpeedTestData = async () => {
 
 export const fetchActiveDevices = async () => {
   try {
-    const response = await axios.get(API_JSON_URL);
+    const response = await axios.get(API_PING_URL);
 
     console.log('Devices API Response:', response.data);
 
@@ -49,3 +49,19 @@ export const fetchActiveDevices = async () => {
     return [];
   }
 };
+
+export const fetchMetricsData = async () => {
+  try {
+    const response = await axios.get(API_METRICS_URL);
+
+    console.log('API Response:', response.data); // Log seluruh response
+    console.log('Parsed Data:', response.data.data || []); // Log data yang diproses
+
+    return response.data.data || [];
+  } catch (error) {
+    console.error('API Fetch Error:', error.message); // Log error jika terjadi kesalahan
+    throw new Error(error.message);
+  }
+};
+
+fetchMetricsData();

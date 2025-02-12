@@ -5,7 +5,7 @@ import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 const AppDevice = ({ devices }) => {
   return (
     <>
-      <Table striped bordered hover responsive style={{ fontFamily: 'Poppins, sans-serif' }}>
+      <Table striped bordered hover responsive>
         <thead>
           <tr>
             <th>IP Address</th>
@@ -24,7 +24,7 @@ const AppDevice = ({ devices }) => {
                     <FaCheckCircle className="me-2" color="green" />
                     Online
                   </>
-                ) : (
+                  ) : (
                   <>
                     <FaTimesCircle className="me-2" color="red" />
                     Offline

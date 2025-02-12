@@ -14,7 +14,7 @@ const PingChart = ({ data }) => {
     ],
     options: {
       chart: {
-        height: 250,
+        height: 150,
         type: 'area',
         background: '#ececec',
         toolbar: { show: false },

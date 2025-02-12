@@ -1,0 +1,1179 @@
+{
+    "status": 200,
+    "data": [
+        {
+        "monitor_cert_days_remaining": {
+        "help": "The number of days remaining until the certificate expires",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "monitor_name": "BCA Service EndUser",
+        "monitor_type": "http",
+        "monitor_url": "https://bcaapi.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 85
+        },
+        {
+        "labels": {
+        "monitor_name": "Network Service",
+        "monitor_type": "http",
+        "monitor_url": "https://network.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 85
+        },
+        {
+        "labels": {
+        "monitor_name": "Survey Pelanggan",
+        "monitor_type": "http",
+        "monitor_url": "https://survey.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 85
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak Services",
+        "monitor_type": "http",
+        "monitor_url": "https://qontak.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 42
+        },
+        {
+        "labels": {
+        "monitor_name": "SpeedTest 2 Gedung",
+        "monitor_type": "http",
+        "monitor_url": "https://raspberry.pandawa24jam.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 42
+        },
+        {
+        "labels": {
+        "monitor_name": "Repo Server",
+        "monitor_type": "http",
+        "monitor_url": "https://gittea.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 85
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak WebHook",
+        "monitor_type": "http",
+        "monitor_url": "https://vm1.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 42
+        },
+        {
+        "labels": {
+        "monitor_name": "Qlast Service",
+        "monitor_type": "http",
+        "monitor_url": "https://qlast.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 85
+        }
+        ]
+        },
+        "monitor_cert_is_valid": {
+        "help": "Is the certificate still valid? (1 = Yes, 0= No)",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "monitor_name": "BCA Service EndUser",
+        "monitor_type": "http",
+        "monitor_url": "https://bcaapi.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Network Service",
+        "monitor_type": "http",
+        "monitor_url": "https://network.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Survey Pelanggan",
+        "monitor_type": "http",
+        "monitor_url": "https://survey.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak Services",
+        "monitor_type": "http",
+        "monitor_url": "https://qontak.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "SpeedTest 2 Gedung",
+        "monitor_type": "http",
+        "monitor_url": "https://raspberry.pandawa24jam.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Repo Server",
+        "monitor_type": "http",
+        "monitor_url": "https://gittea.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak WebHook",
+        "monitor_type": "http",
+        "monitor_url": "https://vm1.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Qlast Service",
+        "monitor_type": "http",
+        "monitor_url": "https://qlast.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        }
+        ]
+        },
+        "monitor_response_time": {
+        "help": "Monitor Response Time (ms)",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "monitor_name": "VM - Jurnal ID Service",
+        "monitor_type": "http",
+        "monitor_url": "http://116.193.190.236:4000/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 6
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - BCA Service",
+        "monitor_type": "http",
+        "monitor_url": "http://116.193.190.236:8080",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 63
+        },
+        {
+        "labels": {
+        "monitor_name": "BCA Service EndUser",
+        "monitor_type": "http",
+        "monitor_url": "https://bcaapi.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 657
+        },
+        {
+        "labels": {
+        "monitor_name": "Network Service",
+        "monitor_type": "http",
+        "monitor_url": "https://network.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 283
+        },
+        {
+        "labels": {
+        "monitor_name": "Survey Pelanggan",
+        "monitor_type": "http",
+        "monitor_url": "https://survey.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 141
+        },
+        {
+        "labels": {
+        "monitor_name": "Container Server",
+        "monitor_type": "ping",
+        "monitor_url": "portainer.pandawa-mqzz.com",
+        "monitor_hostname": "portainer.pandawa-mqzz.com",
+        "monitor_port": "null"
+        },
+        "value": 14.7
+        },
+        {
+        "labels": {
+        "monitor_name": "Container Server",
+        "monitor_type": "real-browser",
+        "monitor_url": "https://portainer.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": -1
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak Services",
+        "monitor_type": "http",
+        "monitor_url": "https://qontak.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 169
+        },
+        {
+        "labels": {
+        "monitor_name": "File Server",
+        "monitor_type": "ping",
+        "monitor_url": "https://datacenter.pandawa-mqzz.com",
+        "monitor_hostname": "datacenter.pandawa-mqzz.com",
+        "monitor_port": "null"
+        },
+        "value": 14.5
+        },
+        {
+        "labels": {
+        "monitor_name": "SpeedTest 2 Gedung",
+        "monitor_type": "http",
+        "monitor_url": "https://raspberry.pandawa24jam.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 223
+        },
+        {
+        "labels": {
+        "monitor_name": "Repo Server",
+        "monitor_type": "http",
+        "monitor_url": "https://gittea.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 177
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak WebHook",
+        "monitor_type": "http",
+        "monitor_url": "https://vm1.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 172
+        },
+        {
+        "labels": {
+        "monitor_name": "Qlast Service",
+        "monitor_type": "http",
+        "monitor_url": "https://qlast.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 123
+        }
+        ]
+        },
+        "monitor_status": {
+        "help": "Monitor Status (1 = UP, 0= DOWN, 2= PENDING, 3= MAINTENANCE)",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "monitor_name": "VM - Jurnal ID Service",
+        "monitor_type": "http",
+        "monitor_url": "http://116.193.190.236:4000/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - BCA Service",
+        "monitor_type": "http",
+        "monitor_url": "http://116.193.190.236:8080",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "BCA Service EndUser",
+        "monitor_type": "http",
+        "monitor_url": "https://bcaapi.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Network Service",
+        "monitor_type": "http",
+        "monitor_url": "https://network.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Survey Pelanggan",
+        "monitor_type": "http",
+        "monitor_url": "https://survey.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Container Server",
+        "monitor_type": "ping",
+        "monitor_url": "portainer.pandawa-mqzz.com",
+        "monitor_hostname": "portainer.pandawa-mqzz.com",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Container Server",
+        "monitor_type": "real-browser",
+        "monitor_url": "https://portainer.pandawa-mqzz.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 2
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak Services",
+        "monitor_type": "http",
+        "monitor_url": "https://qontak.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "File Server",
+        "monitor_type": "ping",
+        "monitor_url": "https://datacenter.pandawa-mqzz.com",
+        "monitor_hostname": "datacenter.pandawa-mqzz.com",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "SpeedTest 2 Gedung",
+        "monitor_type": "http",
+        "monitor_url": "https://raspberry.pandawa24jam.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Repo Server",
+        "monitor_type": "http",
+        "monitor_url": "https://gittea.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "VM - Qontak WebHook",
+        "monitor_type": "http",
+        "monitor_url": "https://vm1.pandawa24jam.com",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        },
+        {
+        "labels": {
+        "monitor_name": "Qlast Service",
+        "monitor_type": "http",
+        "monitor_url": "https://qlast.pandawa-mqzz.com/",
+        "monitor_hostname": "null",
+        "monitor_port": "null"
+        },
+        "value": 1
+        }
+        ]
+        },
+        "process_cpu_user_seconds_total": {
+        "help": "Total user CPU time spent in seconds.",
+        "type": "counter",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 36797.886798
+        }
+        ]
+        },
+        "process_cpu_system_seconds_total": {
+        "help": "Total system CPU time spent in seconds.",
+        "type": "counter",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 13019.787974999996
+        }
+        ]
+        },
+        "process_cpu_seconds_total": {
+        "help": "Total user and system CPU time spent in seconds.",
+        "type": "counter",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 49817.674773
+        }
+        ]
+        },
+        "process_start_time_seconds": {
+        "help": "Start time of the process since unix epoch in seconds.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 1734916246
+        }
+        ]
+        },
+        "process_resident_memory_bytes": {
+        "help": "Resident memory size in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 145203200
+        }
+        ]
+        },
+        "process_virtual_memory_bytes": {
+        "help": "Virtual memory size in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 1023762432
+        }
+        ]
+        },
+        "process_heap_bytes": {
+        "help": "Process heap size in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 262057984
+        }
+        ]
+        },
+        "process_open_fds": {
+        "help": "Number of open file descriptors.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 23
+        }
+        ]
+        },
+        "process_max_fds": {
+        "help": "Maximum number of open file descriptors.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 1048576
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_seconds": {
+        "help": "Lag of event loop in seconds.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.006816524
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_min_seconds": {
+        "help": "The minimum recorded event loop delay.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.000017408
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_max_seconds": {
+        "help": "The maximum recorded event loop delay.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 5.255462911
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_mean_seconds": {
+        "help": "The mean of the recorded event loop delays.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.010193849227516068
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_stddev_seconds": {
+        "help": "The standard deviation of the recorded event loop delays.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.00042820729967397607
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_p50_seconds": {
+        "help": "The 50th percentile of the recorded event loop delays.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.010182655
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_p90_seconds": {
+        "help": "The 90th percentile of the recorded event loop delays.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.010239999
+        }
+        ]
+        },
+        "nodejs_eventloop_lag_p99_seconds": {
+        "help": "The 99th percentile of the recorded event loop delays.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0.010739711
+        }
+        ]
+        },
+        "nodejs_active_handles": {
+        "help": "Number of active libuv handles grouped by handle type. Every handle type is C++ class name.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "type": "Socket"
+        },
+        "value": 3
+        },
+        {
+        "labels": {
+        "type": "Server"
+        },
+        "value": 1
+        }
+        ]
+        },
+        "nodejs_active_handles_total": {
+        "help": "Total number of active handles.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 4
+        }
+        ]
+        },
+        "nodejs_active_requests": {
+        "help": "Number of active libuv requests grouped by request type. Every request type is C++ class name.",
+        "type": "gauge",
+        "metrics": []
+        },
+        "nodejs_active_requests_total": {
+        "help": "Total number of active requests.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0
+        }
+        ]
+        },
+        "nodejs_heap_size_total_bytes": {
+        "help": "Process heap size from Node.js in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 84824064
+        }
+        ]
+        },
+        "nodejs_heap_size_used_bytes": {
+        "help": "Process heap size used from Node.js in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 73200752
+        }
+        ]
+        },
+        "nodejs_external_memory_bytes": {
+        "help": "Node.js external memory size in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 20493995
+        }
+        ]
+        },
+        "nodejs_heap_space_size_total_bytes": {
+        "help": "Process heap space size total from Node.js in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "space": "read_only"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "old"
+        },
+        "value": 63852544
+        },
+        {
+        "labels": {
+        "space": "code"
+        },
+        "value": 6762496
+        },
+        {
+        "labels": {
+        "space": "map"
+        },
+        "value": 5251072
+        },
+        {
+        "labels": {
+        "space": "large_object"
+        },
+        "value": 7909376
+        },
+        {
+        "labels": {
+        "space": "code_large_object"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "new_large_object"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "new"
+        },
+        "value": 1048576
+        }
+        ]
+        },
+        "nodejs_heap_space_size_used_bytes": {
+        "help": "Process heap space size used from Node.js in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "space": "read_only"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "old"
+        },
+        "value": 56253976
+        },
+        {
+        "labels": {
+        "space": "code"
+        },
+        "value": 5245248
+        },
+        {
+        "labels": {
+        "space": "map"
+        },
+        "value": 3538152
+        },
+        {
+        "labels": {
+        "space": "large_object"
+        },
+        "value": 7718248
+        },
+        {
+        "labels": {
+        "space": "code_large_object"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "new_large_object"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "new"
+        },
+        "value": 450312
+        }
+        ]
+        },
+        "nodejs_heap_space_size_available_bytes": {
+        "help": "Process heap space size available from Node.js in bytes.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "space": "read_only"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "old"
+        },
+        "value": 6262440
+        },
+        {
+        "labels": {
+        "space": "code"
+        },
+        "value": 1091264
+        },
+        {
+        "labels": {
+        "space": "map"
+        },
+        "value": 1620520
+        },
+        {
+        "labels": {
+        "space": "large_object"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "code_large_object"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "space": "new_large_object"
+        },
+        "value": 1030976
+        },
+        {
+        "labels": {
+        "space": "new"
+        },
+        "value": 580664
+        }
+        ]
+        },
+        "nodejs_version_info": {
+        "help": "Node.js version info.",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "version": "v18.20.3",
+        "major": "18",
+        "minor": "20",
+        "patch": "3"
+        },
+        "value": 1
+        }
+        ]
+        },
+        "nodejs_gc_duration_seconds": {
+        "help": "Garbage collection duration by kind, one of major, minor, incremental or weakcb.",
+        "type": "histogram",
+        "metrics": []
+        },
+        "nodejs_gc_duration_seconds_bucket": {
+        "help": "Garbage collection duration by kind, one of major, minor, incremental or weakcb.",
+        "type": "histogram",
+        "metrics": [
+        {
+        "labels": {
+        "le": "0.001",
+        "kind": "minor"
+        },
+        "value": 93
+        },
+        {
+        "labels": {
+        "le": "0.01",
+        "kind": "minor"
+        },
+        "value": 204435
+        },
+        {
+        "labels": {
+        "le": "0.1",
+        "kind": "minor"
+        },
+        "value": 204876
+        },
+        {
+        "labels": {
+        "le": "1",
+        "kind": "minor"
+        },
+        "value": 204878
+        },
+        {
+        "labels": {
+        "le": "2",
+        "kind": "minor"
+        },
+        "value": 204878
+        },
+        {
+        "labels": {
+        "le": "5",
+        "kind": "minor"
+        },
+        "value": 204878
+        },
+        {
+        "labels": {
+        "le": "+Inf",
+        "kind": "minor"
+        },
+        "value": 204879
+        },
+        {
+        "labels": {
+        "le": "0.001",
+        "kind": "incremental"
+        },
+        "value": 3294
+        },
+        {
+        "labels": {
+        "le": "0.01",
+        "kind": "incremental"
+        },
+        "value": 3608
+        },
+        {
+        "labels": {
+        "le": "0.1",
+        "kind": "incremental"
+        },
+        "value": 5168
+        },
+        {
+        "labels": {
+        "le": "1",
+        "kind": "incremental"
+        },
+        "value": 5168
+        },
+        {
+        "labels": {
+        "le": "2",
+        "kind": "incremental"
+        },
+        "value": 5168
+        },
+        {
+        "labels": {
+        "le": "5",
+        "kind": "incremental"
+        },
+        "value": 5168
+        },
+        {
+        "labels": {
+        "le": "+Inf",
+        "kind": "incremental"
+        },
+        "value": 5168
+        },
+        {
+        "labels": {
+        "le": "0.001",
+        "kind": "major"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "le": "0.01",
+        "kind": "major"
+        },
+        "value": 0
+        },
+        {
+        "labels": {
+        "le": "0.1",
+        "kind": "major"
+        },
+        "value": 3211
+        },
+        {
+        "labels": {
+        "le": "1",
+        "kind": "major"
+        },
+        "value": 3211
+        },
+        {
+        "labels": {
+        "le": "2",
+        "kind": "major"
+        },
+        "value": 3211
+        },
+        {
+        "labels": {
+        "le": "5",
+        "kind": "major"
+        },
+        "value": 3211
+        },
+        {
+        "labels": {
+        "le": "+Inf",
+        "kind": "major"
+        },
+        "value": 3211
+        },
+        {
+        "labels": {
+        "le": "0.001",
+        "kind": "weakcb"
+        },
+        "value": 66852
+        },
+        {
+        "labels": {
+        "le": "0.01",
+        "kind": "weakcb"
+        },
+        "value": 165905
+        },
+        {
+        "labels": {
+        "le": "0.1",
+        "kind": "weakcb"
+        },
+        "value": 165950
+        },
+        {
+        "labels": {
+        "le": "1",
+        "kind": "weakcb"
+        },
+        "value": 165950
+        },
+        {
+        "labels": {
+        "le": "2",
+        "kind": "weakcb"
+        },
+        "value": 165950
+        },
+        {
+        "labels": {
+        "le": "5",
+        "kind": "weakcb"
+        },
+        "value": 165950
+        },
+        {
+        "labels": {
+        "le": "+Inf",
+        "kind": "weakcb"
+        },
+        "value": 165950
+        }
+        ]
+        },
+        "nodejs_gc_duration_seconds_sum": {
+        "help": "Garbage collection duration by kind, one of major, minor, incremental or weakcb.",
+        "type": "histogram",
+        "metrics": [
+        {
+        "labels": {
+        "kind": "minor"
+        },
+        "value": 406.06503812157746
+        },
+        {
+        "labels": {
+        "kind": "incremental"
+        },
+        "value": 33.31399219787124
+        },
+        {
+        "labels": {
+        "kind": "major"
+        },
+        "value": 71.08429650962347
+        },
+        {
+        "labels": {
+        "kind": "weakcb"
+        },
+        "value": 203.67245135796026
+        }
+        ]
+        },
+        "nodejs_gc_duration_seconds_count": {
+        "help": "Garbage collection duration by kind, one of major, minor, incremental or weakcb.",
+        "type": "histogram",
+        "metrics": [
+        {
+        "labels": {
+        "kind": "minor"
+        },
+        "value": 204879
+        },
+        {
+        "labels": {
+        "kind": "incremental"
+        },
+        "value": 5168
+        },
+        {
+        "labels": {
+        "kind": "major"
+        },
+        "value": 3211
+        },
+        {
+        "labels": {
+        "kind": "weakcb"
+        },
+        "value": 165950
+        }
+        ]
+        },
+        "app_version": {
+        "help": "The service version by package.json",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {
+        "version": "1.23.16",
+        "major": "1",
+        "minor": "23",
+        "patch": "16"
+        },
+        "value": 1
+        }
+        ]
+        },
+        "http_request_duration_seconds": {
+        "help": "Duration of HTTP requests in seconds",
+        "type": "histogram",
+        "metrics": []
+        },
+        "http_request_size_bytes": {
+        "help": "Size of HTTP requests in bytes",
+        "type": "histogram",
+        "metrics": []
+        },
+        "http_response_size_bytes": {
+        "help": "Size of HTTP response in bytes",
+        "type": "histogram",
+        "metrics": []
+        },
+        "expressjs_number_of_open_connections": {
+        "help": "Number of open connections to the Express.js server",
+        "type": "gauge",
+        "metrics": [
+        {
+        "labels": {},
+        "value": 0
+        }
+        ]
+        },
+        "id": "3247"
+        }
+        ]
+}

@@ -1,32 +1,15 @@
 import { useEffect, useState } from 'react';
 import { Container, Spinner, Alert, Row, Col } from 'react-bootstrap';
 import { fetchSpeedTestData } from '../services/api';
-import { fetchActiveDevices } from "../services/api"; // Impor fungsi API
 import AverageData from '../components/dashboard/AverageData';
 import Chart from '../components/dashboard/ChartData';
 import DataTable from '../components/dashboard/TableData';
-import AppDevice from '../components/dashboard/AppDevice';
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
-  const [devices, setDevices] = useState([]);
+  // const [devices, setDevices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const loadDevices = async () => {
-      try {
-        const data = await fetchActiveDevices();
-        setDevices(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    loadDevices();
-  }, []);
 
   useEffect(() => {
     const loadData = async () => {
@@ -45,9 +28,8 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <Container fluid className="text-center mt-5 text-light">
-        <Spinner animation="border" variant="light" />
-        <p>Loading...</p>
+      <Container fluid className="text-center mt-5">
+        <Spinner animation="border" variant="danger" />
       </Container>
     );
   }
@@ -61,7 +43,7 @@ const Dashboard = () => {
   }
 
   return (
-    <Container fluid className='d-flex' style={{ fontFamily: 'Poppins, sans-serif'}}>
+    <Container fluid className='d-flex'>
         <Col className="p-3 ms-auto">
           <h4 className='my-3'>Dashboard</h4>
           <Row>
@@ -72,7 +54,6 @@ const Dashboard = () => {
           </Row>
           <Row>
             <Col>
-              <AppDevice devices={devices}/>
               <DataTable data={data} />
             </Col>
           </Row>
